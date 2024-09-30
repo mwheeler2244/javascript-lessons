@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="age">What is your age</label>
+    <input type="number" name="" id="age" />
+    <button id="btn">submit</button>
+    <p id="message"></p>
+  </body>
+
+  <script>
+    let result;
+
+    const btn = document.getElementById("btn");
+    const input = document.getElementById("age");
+    const message = document.getElementById("message");
+
+    btn.addEventListener("click", () => {
+      result = input.value;
+      if (result > 18) {
+        message.textContent = "You can enter";
+      } else if (result < 18) {
+        message.textContent = "go away";
+      }
+    });
+
+    let score = 68;
+    let grade;
+
+    switch (true) {
+      case score > 90:
+        grade = "A";
+        break;
+      case score > 79:
+        grade = "B";
+        break;
+      case score >= 69:
+        grade = "c";
+        break;
+      case score <= 69:
+        grade = "Fail";
+        break;
+    }
+
+    console.log(grade);
+  </script>
+</html>

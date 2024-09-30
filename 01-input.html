@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="greeting">hello</h1>
+    <label for="text">your name</label>
+    <input id="name" type="text" />
+    <button id="submit">submit</button>
+    <p id="helloMess"></p>
+  </body>
+  <script>
+    // let username;
+    // document.getElementById("submit").onclick = function () {
+    //   username = document.getElementById("name").value;
+    //   message = document.getElementById("greeting").innerHTML =
+    //     "hello " + username;
+    // };
+    // console.log(message);
+
+    let username;
+    const submit = document.getElementById("submit");
+    const name = document.getElementById("name");
+    const message = document.getElementById("helloMess");
+
+    submit.addEventListener("click", () => {
+      username = name.value;
+      message.textContent = "hello " + username;
+    });
+  </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="myCheckBox" />
+    <label for="myCheckBox">Subscribe</label><br />
+
+    <input type="radio" id="visaBtn" name="card" />
+    <label for="visaBtn">Visa</label><br />
+    <input type="radio" id="MastercardBtn" name="card" />
+    <label for="mcBtn">Mastercard</label><br />
+    <input type="radio" id="otherBtn" name="card" />
+    <label for="otherBtn">Other</label><br />
+    <button id="submit">Submit</button>
+    <p id="submessage"></p>
+    <p id="paymentresult"></p>
+  </body>
+
+  <script>
+    const subscription = document.getElementById("myCheckBox");
+    const visa = document.getElementById("visaBtn");
+    const mastercard = document.getElementById("MastercardBtn");
+    const other = document.getElementById("otherBtn");
+    const submit = document.getElementById("submit");
+    const result = document.getElementById("submessage");
+    const payresult = document.getElementById("paymentresult");
+
+    submit.addEventListener("click", () => {
+      if (subscription.checked) {
+        result.textContent = "you are subscribed ";
+      } else {
+        result.textContent = "you are not subscribed";
+      }
+      if (visa.checked) {
+        payresult.textContent = "you are paying with visa";
+      } else if (other.checked) {
+        payresult.textContent = "you are paying with other";
+      } else if (mastercard.checked) {
+        payresult.textContent = "you are paying with mastercard";
+      } else {
+        payresult.textContent = "you must select a payment";
+      }
+    });
+  </script>
+</html>

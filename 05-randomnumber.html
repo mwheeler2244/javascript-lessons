@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Roll</button>
+    <p id="result"></p>
+    <script>
+      const result = document.getElementById("result");
+      const btn = document.getElementById("btn");
+
+      // method 1
+      let numb;
+      btn.addEventListener("click", () => {
+        numb = Math.floor(Math.random() * 6) + 1;
+        result.textContent = numb;
+      });
+
+      // method 2
+
+      document.getElementById("btn").onclick = function () {
+        num = Math.floor(Math.random() * 6) + 1;
+        result.textContent = num;
+      };
+    </script>
+  </body>
+</html>

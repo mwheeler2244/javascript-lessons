@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // while loop = repeat some code WHILE some condition if true
+
+      let userName = "";
+
+      while (userName === "" || userName === null) {
+        userName = window.prompt("enter username");
+      }
+
+      console.log(`your user name is ${userName}`);
+
+      let login = false;
+      let userName;
+      let password;
+
+      do {
+        userName = window.prompt(`enter your username`);
+        password = window.prompt(`enter your password`);
+
+        if (userName === "mike" && password === "pass") {
+          login = true;
+          window.alert("you are loggin in");
+        } else {
+          console.log("invalid, please try again");
+        }
+      } while (!login);
+    </script>
+  </body>
+</html>

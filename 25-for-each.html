@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  FOR EACH () = method used to iterate over the elements of an array
+      //                and apply a specified function (callback) to each element
+
+      //                array.foreach(callback)
+
+      const fruits = ["apple", "orange", "banana"];
+      fruits.forEach(cap);
+
+      fruits.forEach(display);
+
+      function upper(element, index) {
+        fruits[index] = element.toUpperCase();
+      }
+      function cap(element, index) {
+        fruits[index] = element.charAt(0).toUpperCase() + element.slice(1);
+      }
+
+      function display(element) {
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>

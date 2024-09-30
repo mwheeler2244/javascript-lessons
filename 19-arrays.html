@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ///  structure that can hold more than 1 value
+
+      let fruits = ["apple", "orange", "banana"];
+
+      // fruits.pop();
+      //fruits.push("mango");
+      //fruits.unshift("orange");
+      //fruits.shift("");
+
+      let newFruit = fruits.length;
+      let specific = fruits.indexOf("orange");
+      console.log(newFruit);
+      console.log(specific);
+
+      //   for (i = 0; i < fruits.length; i++) {
+      //     console.log(fruits[i]);
+      //   }
+      fruits.sort().reverse();
+      for (each of fruits) {
+        console.log(each);
+      }
+
+      let guitars = [
+        "fender stat",
+        "gibson 335",
+        "gibosn les paul",
+        "fender tele",
+      ];
+      for (guitar in guitars) {
+        console.log(guitars[guitar]);
+      }
+
+      for (guitar of guitars) {
+        console.log(guitar);
+      }
+
+      for (let i = 0; i < guitars.length; i++) {
+        console.log(guitars[i]);
+      }
+
+      for (guitar of guitars) {
+        if (guitar === "gibson 335") {
+          console.log(`${guitar} is the best`);
+        }
+      }
+
+      // for (let i = 0; i < guitars.length; i++) {
+      //   console.log(guitars[i]);
+      // }
+
+      // console.log(guitars);
+
+      /* function sum(arr) {
+        let count = 0;
+        for (i = 0; i < arr.length; i++) {
+          count += arr[i];
+        }
+        return count;
+      }
+
+      console.log(sum([1, 5, 3, 1]));*/
+    </script>
+  </body>
+</html>

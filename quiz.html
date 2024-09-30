@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.  Sum of Array Elements
+
+      //     Write a function sumArray that takes an array of numbers and returns the sum of its elements.
+      //   function sumArray(numbers) {
+      //     let result = 0;
+      //     for (let num of numbers) {
+      //       result += num;
+      //     }
+      //     return result;
+      //   }
+      //   console.log(sumArray([2, 3, 5]));
+
+      // 2. Find Maximum Value = Create a function findMax that accepts an array of numbers and returns the maximum value in the array.
+
+      let numbers = [2, 6, 7];
+      function findMax(numbers) {
+        return Math.max(...numbers);
+      }
+
+      console.log(findMax(numbers));
+
+      function sumOfNum(numbers) {
+        let result = 0;
+        for (num in numbers) {
+          result += numbers[num];
+        }
+        return result;
+      }
+      console.log(sumOfNum(numbers));
+    </script>
+  </body>
+</html>

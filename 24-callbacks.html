@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <script>
+      // CALLBACK = FUNCTION THAT IS PASSED AS AN ARGUMENT TO ANOTHER FUNTION.
+
+      //   USED TO HANDLE ASYNCHRONOUS OPERATIONIS
+      // 1. READING A FILE
+      // 2. NETWORK REQUESTS
+      // 1. INTERACTING WITH DATABASES
+
+      hello(leave);
+      goodbye();
+      function hello(callback) {
+        console.log("hello");
+        callback();
+      }
+
+      function goodbye() {
+        console.log("goodbye");
+      }
+      function leave() {
+        console.log("leave");
+      }
+
+      sum(display, 3, 2);
+
+      function sum(callback, x, y) {
+        let result = x + y;
+        callback(result);
+      }
+
+      function display(result) {
+        document.getElementById("title").textContent = result;
+      }
+    </script>
+  </body>
+</html>

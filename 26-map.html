@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // MAP() = Accepts a callback and applies that function to
+      //         each element of an array, then return new array
+
+      const arr = [1, 2, 23];
+
+      console.log(squareNum(arr));
+
+      function squareNum(numbers) {
+        for (num in numbers) {
+          numbers[num] = Math.pow(numbers[num], 2);
+        }
+        return numbers;
+      }
+
+      //   function squareNum(num) {
+      //     return Math.pow(num, 2);
+      //   }
+    </script>
+  </body>
+</html>

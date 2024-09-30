@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // spread = unpackes an array
+
+      let numbers = [2, 10, 66, 30, 25];
+      let max = Math.max(...numbers);
+
+      console.log(max);
+
+      let name = "mike";
+      let letters = [...name].join("+");
+      console.log(letters);
+
+      let meats = ["beef", "pork"];
+      let cheese = ["american", "swiss"];
+
+      let atkins = [meats[0], ...cheese];
+
+      console.log(atkins);
+    </script>
+  </body>
+</html>

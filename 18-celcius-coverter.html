@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Temp Conversion</h1>
+    <input type="number" name="" id="input" />
+    <input type="radio" id="cel" name="unit" />
+    <label for="cel">celcius to fahrenheight</label>
+    <input type="radio" id="far" name="unit" />
+    <label for="far">fahrenheight to celcius</label>
+    <button id="btn">submit</button>
+    <p id="message"></p>
+  </body>
+  <script>
+    const result = document.getElementById("message");
+    const submit = document.getElementById("btn");
+    const far = document.getElementById("far");
+    const cel = document.getElementById("cel");
+    const input = document.getElementById("input");
+
+    submit.addEventListener("click", () => {
+      if (cel.checked) {
+        result.textContent = Number(input.value) * (9 / 5) + 32 + " deg F";
+      } else if (far.checked) {
+        result.textContent = Number(input.value - 32) * (5 / 9) + " deg C";
+      } else {
+        result.textContent = "please select measurement";
+      }
+    });
+  </script>
+</html>

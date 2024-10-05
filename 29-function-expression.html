@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //      FUNCTION DECLARATION = define a reusable block of code that performs a specific task
+
+      function hello() {
+        console.log("hello");
+      }
+
+      //      FUNCTION EXPRESSION  = a way to define functions as values or variables
+
+      const numbers = [2, 3, 4, 9, 12, 15, 17, 18, 3];
+
+      //   const square = numbers.map((element) => Math.pow(element, 2));
+
+      const square = numbers.map((num) => Math.pow(num, 2));
+      console.log(square);
+
+      const filter = numbers.filter((numbers) => numbers % 2 === 0);
+      console.log(filter);
+
+      const isOdd = numbers.filter((num) => num % 2 !== 0);
+      console.log(isOdd);
+
+      const total = numbers.reduce((n, e) => n + e);
+      console.log(total);
+    </script>
+  </body>
+</html>

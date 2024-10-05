@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //          ARROW FUNCITON = a concise way to write function expressions good for simple funtions
+      //                              that you use only once (parameters) => some code
+
+      const hello = (name, age) => {
+        console.log(`hello ${name}`), console.log(`you are ${age} years old`);
+      };
+
+      hello("mike", 37);
+
+      setTimeout(() => console.log("hello"), 2000);
+
+      numbers = [1, 2, 3, 4, 6, 5];
+
+      price = [99.99, 102, 98.99];
+
+      const even = numbers.filter((num) => num % 2 === 0);
+
+      const total = price.reduce((n, e) => n + e);
+
+      const average = (total / price.length).toFixed(2);
+
+      console.log(average);
+
+      console.log(even);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // OBJECTS  = a collection of related properties and methods.
+      //              Can represent real world objects. Object = {key: value, function()}
+
+      const child1 = {
+        name: "jonah",
+        age: 7,
+        grade: 2,
+        greet: () => "hello my name is",
+      };
+
+      const child2 = {
+        name: "ezra",
+        age: 6,
+        grade: 1,
+        greet: function () {
+          console.log("hello my name is Ezra");
+        },
+      };
+
+      const { name, age } = child2;
+      console.log(name, age);
+      console.log(child1.greet());
+      console.log(child2.greet());
+
+      //   THIS =  reference to the object where THIS is used. Person.name = this.name
+
+      const child3 = {
+        name: "samson",
+        age: 5,
+        grade: 1,
+        food: "chips",
+        greet: function () {
+          console.log(`hello my name is ${this.name}`);
+        },
+        // cannot use an arrow function b/c of scope
+
+        eat: function () {
+          console.log(`${this.name} likes to eat ${this.food}`);
+        },
+      };
+
+      console.log(child3.grade);
+      child3.greet();
+      child3.eat();
+    </script>
+  </body>
+</html>

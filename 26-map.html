@@ -11,19 +11,40 @@
       //         each element of an array, then return new array
 
       const arr = [1, 2, 23];
+      const newArry = arr.map(squareNum);
 
-      console.log(squareNum(arr));
+      console.log(square(arr));
+      console.log(newArry);
 
-      function squareNum(numbers) {
+      function square(numbers) {
         for (num in numbers) {
           numbers[num] = Math.pow(numbers[num], 2);
         }
         return numbers;
       }
 
-      //   function squareNum(num) {
-      //     return Math.pow(num, 2);
-      //   }
+      function squareNum(num) {
+        return Math.pow(num, 3);
+      }
+
+      students = ["jimmy", "john"];
+      newStudents = students.map(upper);
+
+      console.log(newStudents);
+      function upper(e) {
+        return e.toUpperCase();
+      }
+
+      dates = ["2004-01-01"];
+      newDate = dates.map(changeDate);
+
+      console.log(newDate);
+
+      function changeDate(date) {
+        const parts = date.split("-");
+
+        return `${parts[1]}/${parts[2]}/${parts[0]}`;
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // CLASSES = proved a more structored and clean way to work with objects
+
+      class Guitar {
+        constructor(make, model, year) {
+          this.make = make;
+          this.model = model;
+          this.year = year;
+        }
+
+        sellGuitar() {
+          console.log(`you want to sell this ${this.make} ${this.model}?`);
+        }
+      }
+
+      const customer1 = new Guitar("fender", "strat", 1969);
+
+      customer1.sellGuitar();
+
+      class Product {
+        constructor(product, price) {
+          this.product = product;
+          this.price = price;
+        }
+
+        displayProduct() {
+          console.log(`product: ${this.product}`);
+          console.log(`price: $${this.price}`);
+        }
+
+        tax(salesTax) {
+          return this.price + this.price * salesTax;
+        }
+      }
+
+      const salesTax = 0.1;
+      const purchase1 = new Product("t-shirt", 20);
+      const total = purchase1.tax(salesTax);
+
+      console.log(`your total with tax is $${total}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        static userCount = 0;
+
+        constructor(username) {
+          this.username = username;
+          User.userCount++;
+        }
+
+        greet() {
+          console.log(`hello i am user ${this.username}`);
+        }
+
+        static usersOnline() {
+          console.log(`there are ${User.userCount} users online`);
+        }
+      }
+
+      const newUser1 = new User("mike");
+
+      console.log(newUser1.username);
+      console.log(User.userCount);
+
+      newUser1.greet();
+      User.usersOnline();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  REDUCE() = reduce the elements of an array to a single value
+
+      cost = [5, 10, 50.99, 35.99];
+
+      total = cost.reduce(sum);
+
+      total = total.toFixed(2);
+
+      console.log(` your total is $${total}`);
+
+      function sum(accumulator, e) {
+        return accumulator + e;
+      }
+
+      grades = [80, 80, 60];
+      maximum = grades.reduce(max);
+      minumum = grades.reduce(min);
+
+      console.log(maximum);
+      console.log(minumum);
+      console.log(average(grades));
+      function max(n, e) {
+        return Math.max(n, e);
+      }
+      function min(n, e) {
+        return Math.min(n, e);
+      }
+      function average(scores) {
+        let sum = scores.reduce((n, e) => n + e);
+
+        let total = scores.length;
+        return sum / total;
+      }
+      console.log(findAverage(grades));
+      function findAverage(grades) {
+        let sum = 0;
+        for (grade of grades) {
+          sum += grade;
+        }
+        return sum / grades.length;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let colors = ["red", "blue"];
+
+      [colors[0], colors[1]] = [colors[1], colors[0]];
+
+      console.log(colors);
+
+      function getGuitar({ make, model, year }) {
+        console.log(`this ${make} ${model} is very old`);
+      }
+
+      const guitar1 = {
+        make: "fender",
+        model: "strat",
+        year: 1969,
+      };
+
+      const guitar2 = {
+        make: "gibson",
+        model: "335",
+        year: 1973,
+        quantity: {
+          home: 5,
+          office: 3,
+        },
+      };
+      const {
+        year,
+        quantity: { home },
+      } = guitar2;
+      console.log(year, home);
+      getGuitar(guitar2);
+    </script>
+  </body>
+</html>

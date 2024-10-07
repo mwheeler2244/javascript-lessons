@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Getter = special method that makes a property readable
+      // Setter = special method that make a property writable
+
+      // validate and modify a value when reading/writing a property
+
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+
+        set width(newWidth) {
+          if (newWidth > 0) {
+            this._width = newWidth;
+          } else {
+            console.error("width must be a positive number");
+          }
+        }
+
+        get width() {
+          return this._width;
+        }
+      }
+
+      const size = new Rectangle(10, 10);
+
+      size.width = -15;
+      console.log(size.width);
+
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        set name(newName) {
+          if (typeof newName === "string" && newName.length > 0) {
+            this._name = newName;
+          } else {
+            console.error("incorrect name");
+          }
+        }
+
+        set age(newAge) {
+          if (typeof newAge === "number" && newAge > 0) {
+            this._age = newAge;
+          } else {
+            console.error("incorrect age");
+          }
+        }
+
+        get name() {
+          return this._name;
+        }
+
+        get age() {
+          return this._age;
+        }
+      }
+
+      const user1 = new Person("mike", 40);
+      console.log(user1.name);
+      console.log(user1.age);
+    </script>
+  </body>
+</html>

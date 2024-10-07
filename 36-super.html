@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //      SUPER = keyword is used in classes to call the constructor or access the properties and methods of parents (super class). this = this object. this = this parent
+
+      class Animal {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        move(speed) {
+          console.log(`${this.name} moves at a speed of ${speed} mph`);
+        }
+      }
+
+      class Rabbit extends Animal {
+        constructor(name, age, runspeed) {
+          super(name, age);
+          this.runspeed = runspeed;
+        }
+
+        run() {
+          console.log(`${this.name} is running`);
+          super.move(this.runspeed);
+        }
+      }
+
+      const rabbit = new Rabbit("bugs", 2, 15);
+      console.log(rabbit.name);
+
+      rabbit.run();
+    </script>
+  </body>
+</html>

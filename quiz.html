@@ -141,6 +141,109 @@
 
       // 10. Deep Object Comparison
       // Write a function that compares two objects deeply and returns true if they are equal, false otherwise
+
+
+      // Exercise 1: Variable Declaration and Basic Operations
+// Declare two variables, perform addition, subtraction, multiplication, and division.
+
+let num1 = 10;
+let num2 = 5;
+
+function sum3(num1, num2){
+  return num1 + num2
+}
+console.log(sum3(4,4))
+
+// Exercise 2: String Manipulation
+// Create a function that takes a first name and last name as parameters and returns a full name.
+
+function fullName(firstName, lastName) {
+  // Your code here
+}
+
+// Exercise 3: Array Manipulation
+// Create an array of numbers, then write a function to find the largest number in the array.
+
+function findLargest(arr) {
+  // Your code here
+}
+
+let numbers = [3, 7, 2, 9, 1, 5];
+
+// Exercise 4: Object Creation and Method
+// Create an object representing a car with properties and a method to display its information.
+
+let car = {
+  // Your code here
+};
+
+// Exercise 5: Conditional Statements
+// Write a function that takes a number as input and returns "Fizz" if it's divisible by 3, 
+// "Buzz" if it's divisible by 5, and "FizzBuzz" if it's divisible by both.
+
+function fizzBuzz(num) {
+  // Your code here
+}
+
+// Answers will be displayed here
+console.log("Answers:");
+
+// Exercise 1 Answer
+console.log("Exercise 1:");
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+
+// Exercise 2 Answer
+console.log("Exercise 2:");
+console.log(fullName("John", "Doe"));
+
+// Exercise 3 Answer
+console.log("Exercise 3:");
+console.log(findLargest(numbers));
+
+// Exercise 4 Answer
+console.log("Exercise 4:");
+car.displayInfo();
+
+// Exercise 5 Answer
+console.log("Exercise 5:");
+console.log(fizzBuzz(15));
+console.log(fizzBuzz(9));
+console.log(fizzBuzz(10));
+console.log(fizzBuzz(7));
+
+// Solution code (uncomment to see the solutions)
+/*
+// Exercise 2 Solution
+function fullName(firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+// Exercise 3 Solution
+function findLargest(arr) {
+  return Math.max(...arr);
+}
+
+// Exercise 4 Solution
+let car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2022,
+  displayInfo: function() {
+    console.log(`This is a ${this.year} ${this.make} ${this.model}`);
+  }
+};
+
+// Exercise 5 Solution
+function fizzBuzz(num) {
+  if (num % 3 === 0 && num % 5 === 0) return "FizzBuzz";
+  if (num % 3 === 0) return "Fizz";
+  if (num % 5 === 0) return "Buzz";
+  return num.toString();
+}
+*/
     </script>
   </body>
 </html>

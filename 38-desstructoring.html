@@ -9,7 +9,9 @@
     <script>
       let colors = ["red", "blue"];
 
-      [colors[0], colors[1]] = [colors[1], colors[0]];
+      colors.push("green");
+
+      console.log(colors)[(colors[0], colors[1])] = [colors[1], colors[0]];
 
       console.log(colors);
 
@@ -36,7 +38,9 @@
         year,
         quantity: { home },
       } = guitar2;
+
       console.log(year, home);
+
       getGuitar(guitar2);
     </script>
   </body>

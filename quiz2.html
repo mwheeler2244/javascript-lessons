@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+
+let shoppingCart = {
+    apples:2,
+    orange: 2,
+    bannana: 6
+}
+
+let price = {
+    apples: 3,
+    orange: 3,
+    banana: 2
+    }
+
+
+let merge = []
+
+Object.keys(shoppingCart).
+
+
+
+//function total(items){
+   // return Object.values(items).reduce((n,e) => n + e, 0)
+//}
+
+
+
+
+console.log(shoppingCart)
+
+
+
+//console.log(total(shoppingCart))
+
+
+
+
+
+const person = {
+    name: 'john',
+    last: 'doe',
+    age: 30,
+    address: {
+        city: 'lincoln',
+        state: 'NE'
+    }
+}
+
+const {name, address:{city, state}} = person
+
+
+console.log(name, city, state)
+
+
+function User (name, age, location){
+    this.name = name,
+    this.age = age,
+    this.location = location
+    this.greet = function(){
+        return `welcome ${this.name} to our site`
+    }
+        
+    }
+
+
+const user1 = new User("john", 30, "lincoln")
+
+console.log(user1.greet())
+
+
+
+class Product{
+    constructor (product, price){
+    this.product = product,
+    this.price = price
+
+}
+
+displayProduct(){
+   return `product: ${this.product}, total: ${this.price}`
+ 
+}
+
+
+}
+
+
+
+const customer = new Product("tshirt", 19.99)
+const reciet = customer.displayProduct()
+
+console.log(reciet)
+
+let user2 = {
+    name: "jim",
+    age: 50
+}
+let user3 = {
+    name: "lindsey",
+    age: 40
+
+}
+
+let users = {user2, user3}
+
+console.log(users)
+
+let calculator = {
+    result: 9,
+    add(n){
+        this.result += n;
+        return this.result
+    },
+    sub(n){this.result - n},
+
+}
+
+let result = calculator.add(4)
+
+
+console.log(result)
+
+
+let book = {
+    title: "this robot",
+    author: "joe blow"
+}
+book.year = 2024
+
+
+function returnInfo(b){
+    return `${b.title} was written by ${b.author} in ${b.year}`
+}
+
+console.log(returnInfo(book))
+
+
+
+
+    </script>
+    
+</body>
+</html>

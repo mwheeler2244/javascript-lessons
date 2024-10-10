@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //
+      //      Nested objects = objects inside of other objects. allows you to represent more complex data structures CHild Pbject is enclosed by a parent object
+
+      //      Person{Address{}, ContactInfo{}}
+      //      ShoppingCart{ keyboard{}, Mouse{}}
+
+      const person = {
+        name: "slippin jimmy",
+        job: " lawyer",
+        hobbies: ["running", "reading"],
+        address: {
+          city: "santa fa",
+          street: "saul st",
+        },
+      };
+
+      person.address.state = "new mexico";
+
+      for (each in person.address) {
+        console.log(person.address[each]);
+      }
+      console.log(person);
+
+      class User {
+        constructor(name, age, ...address) {
+          this.name = name;
+          this.age = age;
+          this.address = new Address(...address);
+        }
+      }
+
+      class Address {
+        constructor(street, city, state) {
+          this.street = street;
+          this.city = city;
+          this.state = state;
+        }
+      }
+
+      const user1 = new User("mike", 37, "5400 68th", "lincoln", "NE");
+      const user2 = new User("molly", 37, "123 street", "lincoln", "NE");
+
+      console.log(user1.address.city);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const guitars = [
+        { make: "fender", model: "strat", year: 1969 },
+        { make: "gibson", model: "335", year: 1973 },
+        { make: "guild", model: "archtop", year: 1967 },
+      ];
+
+      guitars.push({ make: "fender", model: "strat", year: 1982 });
+
+      console.log(guitars);
+
+      console.log(guitars[0].make);
+
+      guitars.forEach((guitar) => {
+        console.log(guitar.make);
+      });
+
+      const names = guitars.map((guitar) => guitar.model);
+      console.log(names);
+
+      guitars.forEach((guitar) => console.log(guitar.year));
+
+      const arry2 = guitars.map((guitar) => guitar.model);
+
+      console.log(arry2);
+
+      const vintage = guitars.filter((guitar) => {
+        return guitar.year < 1970;
+      });
+
+      const description = vintage.map(
+        (guitar) => `${guitar.make} is a vintage guitar`
+      );
+
+      console.log(description);
+
+      const shortName = guitars.filter((guitar) => {
+        return guitar.model.length < 6;
+      });
+
+      console.log(shortName);
+
+      const gibson = guitars.filter((guitar) => guitar.model === "strat");
+      console.log(gibson);
+
+      const fruits = [
+        { name: "banana", calories: 150 },
+        { name: "orange", calories: 100 },
+        { name: "apple", calories: 170 },
+        { name: "pear", calories: 160 },
+      ];
+
+      const max = fruits.reduce((current, next) => {
+        if (current.calories > next.calories) {
+          return current;
+        } else {
+          return next;
+        }
+      });
+
+      console.log(max);
+    </script>
+  </body>
+</html>

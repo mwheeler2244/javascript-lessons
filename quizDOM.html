@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Exercise 1: Dynamic List Creation
+// Create a function that takes an array of strings and dynamically creates
+// an unordered list in the DOM with each string as a list item.
+
+
+function createDynamicList(items) {
+    let mainList = document.createElement('ul')
+    if(items){
+            for(let itemText of items){
+            let itemList = document.createElement('li')
+            itemList.textContent = itemText
+            mainList.appendChild(itemList)}
+        
+        
+        return mainList
+
+        document.body.appendChild(mainList)
+    }
+  
+
+ 
+
+
+  // Your code here
+  // 1. Create a <ul> element
+  // 2. For each string in the 'items' array, create an <li> element and set its text content
+  // 3. Append each <li> to the <ul>
+  // 4. Finally, append the <ul> to the body of the document
+}
+
+// Test
+ console.log(createDynamicList(['apple', 'orange', 'pear','kiwi', 'banana','strawberry','mango','pinnaple']));
+// This should create a list in the DOM that looks like:
+// <ul>
+//   <li>Apple</li>
+//   <li>Banana</li>
+//   <li>Cherry</li>
+// </ul>
+
+// Exercise 2: Toggle Button
+// Create a button that toggles the visibility of a paragraph element when clicked.
+ function createToggleButton() {
+
+    const btn = document.createElement('button')
+    btn.textContent = 'toggle '
+    const par = document.createElement('p')
+
+    par.textContent = 'hello world, welcome to my layer'
+    par.style.display = 'none'
+
+    btn.addEventListener('click',()=>{
+        if(par.style.display === 'none'){
+            return par.style.display = 'block'
+        }else {
+            return par.style.display = 'none'
+        }  
+
+    })
+
+    document.body.appendChild(par)
+    document.body.appendChild(btn)
+  
+  // Your code here
+  // 1. Create a button element with text "Toggle Paragraph"
+  // 2. Create a paragraph element with some text
+  // 3. Add a click event listener to the button that toggles the paragraph's visibility
+  // 4. Append both elements to the body
+}
+
+createToggleButton()
+// Test
+
+// This should create a button and a paragraph in the DOM.
+// Clicking the button should hide/show the paragraph.
+
+// Exercise 3: Dynamic Table Creation
+// Create a function that takes an array of objects and dynamically creates
+// a table in the DOM. Each object represents a row, and its properties represent column values.
+function createDynamicTable(data) {
+  // Your code here
+  // 1. Create a <table> element
+  // 2. Create a <thead> with column names based on the properties of the first object
+  // 3. Create a <tbody> and populate it with rows based on the data
+  // 4. Append the table to the body of the document
+}
+
+// Test
+// const tableData = [
+//   { name: 'John', age: 30, city: 'New York' },
+//   { name: 'Jane', age: 25, city: 'San Francisco' },
+//   { name: 'Bob', age: 35, city: 'Chicago' }
+// ];
+// createDynamicTable(tableData);
+// This should create a table in the DOM with 3 columns (Name, Age, City) and 3 rows of data.
+
+
+    </script>
+  
+</body>
+</html>

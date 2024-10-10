@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn{
+            color: blueviolet;
+            font-size: 3rem;
+            margin-left: 3rem;
+            background-color: chartreuse;
+        }
+        li{
+            font-size: 4rem;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="todo-app">
+        <h1>Todo List</h1>
+        <input type="text" id="todo-input" placeholder="Add a new task">
+        <button id="add-todo">Add</button>
+        
+        <ul id="todo-list"></ul>
+    </div>
+    <script>
+
+        const userInput = document.getElementById('todo-input');
+        const btn = document.getElementById('add-todo');
+        const todoList = document.getElementById('todo-list')
+
+
+btn.addEventListener('click', ()=>{
+    const task = userInput.value;
+    if(task){
+        const li = document.createElement('li');
+        li.textContent = task
+        userInput.value = ''
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete'
+        deleteBtn.className = 'btn'
+        deleteBtn.onclick = ()=>{
+        todoList.removeChild(li)    
+        }
+
+        todoList.appendChild(li)
+        li.appendChild(deleteBtn)
+
+    }
+
+
+})
+
+userInput.addEventListener('keypress', function(e){
+   if(e.key === 'Enter'){
+    btn.click()
+   }
+})
+
+
+
+
+
+
+
+// Exercise 5: Array Methods
+// Use array methods to transform an array of strings into a sorted array
+// of objects, each with a 'name' property and a 'length' property.
+function transformArray(arr) {
+    return arr.map((str)=> ({name: str, length: str.length}))
+    .sort((a, b) => a.name.localeCompare(b.name) )
+  // Your code here
+}
+
+// Test
+console.log(transformArray(["apple", "banana", "cherry"]));
+
+
+
+
+
+
+
+
+
+
+
+
+//   btn.addEventListener('click', function(){
+    // const task = userInput.value
+    // if(task){
+        // const li = document.createElement('li')
+        // li.textContent = task
+        // userInput.value = ''
+
+        // const deleteBtn = document.createElement('button');
+        // deleteBtn.textContent = 'delete'
+        // deleteBtn.addEventListener('click', function(){
+            // todoList.removeChild(li)
+        // })
+        
+        // li.appendChild(deleteBtn)
+        // todoList.appendChild(li)
+
+        
+    // }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

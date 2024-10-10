@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Exercise 1: Array Manipulation with Map and Filter
+// Create a function that takes an array of numbers, doubles the even numbers, and filters out the odd numbers.
+
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let even = numbers.filter((num) => num % 2 === 0)
+
+let double = even.map((num)=> num * 2)
+
+
+console.log(even)
+console.log(double)
+// Exercise 2: Closure
+// Create a function that generates unique ID numbers starting from 1.
+
+function createIDGenerator() {
+  // Your code here
+}
+
+// Exercise 3: Promise Chain
+// Create a series of functions that return promises, and chain them together.
+// The first function should resolve with a number, the second should double it,
+// and the third should add 10 to the result.
+
+function step1() {
+  // Your code here
+}
+
+function step2(num) {
+  // Your code here
+}
+
+function step3(num) {
+  // Your code here
+}
+
+// Exercise 4: Async/Await
+// Rewrite the promise chain from Exercise 3 using async/await syntax.
+
+async function runSteps() {
+  // Your code here
+}
+
+// Exercise 5: Class and Inheritance
+// Create a base class 'Vehicle' with properties 'make' and 'model', and a method 'getInfo'.
+// Then create a subclass 'Car' that extends 'Vehicle' and adds a property 'numDoors' and overrides 'getInfo'.
+
+class Vehicle{
+    constructor(make, model){
+        this.make = "poniac"
+        this.model ="gto"
+    }
+
+    getinfo(){
+return 'old car'
+    }
+
+}
+class Car extends Vehicle{
+    numdoors = "2"
+    getinfo(){
+        return 'new car'
+        
+    }
+ 
+}
+   
+
+
+myCar = new Car
+
+console.log(myCar.getinfo())
+
+    </script>
+    
+</body>
+</html>

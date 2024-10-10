@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 1. Write a function that reverses a string.
+
+let name ="wheeler"
+
+function rev(name){
+  
+    return name.split('').toUpperCase().join('')
+}
+
+console.log(rev(name))
+
+  // Your code here
+
+
+// 2. Create a function that checks if a number is even or odd.
+
+let numbers = [2,3,4]
+
+function odd(number){
+    let result = []
+    for(let num of number){
+        if(num % 2 !== 0){
+            result.push('odd')
+        }else{
+            result.push('even')
+        }
+    }
+    return result
+}
+
+
+console.log(odd(numbers))
+// console.log(odd(number))
+
+// function odd(number){
+//     let result = [];
+//     for(let num of number ){
+//     if(num % 2 !== 0){
+//         result.push( 'odd')
+//         }else{
+//     result.push('even')
+// }}
+// return result
+// }
+  // Your code here
+
+
+// 3. Write a function that calculates the factorial of a number.
+function factorial(n) {
+  // Your code here
+}
+
+
+let max = Math.max(...numbers)
+
+console.log(max)
+// 5. Write a function that counts the occurrence of a specific element in an array.
+
+let dog = ['billy', 'abby', 'billy', 'billy',"billy"]
+
+
+function countOccurrences(arr, element) {
+  return arr.filter((name)=> name === element).length
+}
+console.log(countOccurrences(dog, "billy"))
+
+// 6. Create a function that removes duplicates from an array.
+function removeDuplicates(arr) {
+  // Your code here
+}
+
+// 7. Write a function that checks if a string is a palindrome.
+function isPalindrome(str) {
+  // Your code here
+}
+
+// 8. Create a function that generates a random password of a specified length.
+function generatePassword(length) {
+  // Your code here
+}
+
+// 9. Write a function that calculates the sum of all numbers from 1 to n.
+function sumToN(n) {
+  // Your code here
+}
+
+// 10. Create a function that converts a temperature from Celsius to Fahrenheit.
+function celsiusToFahrenheit(celsius) {
+  // Your code here
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

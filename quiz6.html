@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+let dogs = ['billy' , 'ruby', 'chips', 'fish', 'billy', 'billy']
+
+
+ 
+const findDog = dogs.filter((dog) => dog === "chips").length
+
+console.log(findDog)
+
+
+
+// let companies = [ {
+//     name: amazon, industry: e-commerce, yearStart: 2010,
+//     name: facebook
+
+// }]
+
+// const cart = [
+    
+//        { id: 1, product: 'food', price: 20},
+//         {id: 2, product: 'toy', price: 40},
+//         {id: 3, product: 'toy2', price: 40}
+// ]
+
+// const total = cart.reduce((acc,product) =>   acc + product.price, 0 )
+// console.log(total)
+
+
+// let numbers = [2,4,6,8]
+
+// let sqdouble = numbers
+// .map((num)=> Math.pow(num,2))
+// .map((sq)=> sq * 2)
+
+// console.log(sqdouble)
+
+/*const company = [
+    
+       {name: 'foodland',  product: 'food', start: 2020, end: 2021},
+        {name: 'toyplace', product: 'toy', start: 2010, end: 2024},
+        {name:'toyworld', product: 'toy', start: 2019, end: 2023}
+]
+
+
+
+
+
+
+
+
+console.log(company)
+const years = company.map((item) => {
+    return{
+        name: item.name,
+        length: item.end - item.start
+    }
+} )
+
+const products = company.map((item) => {
+    return {
+        product: item.product,
+        name: item.name
+    }
+})
+
+console.log(products)
+
+
+company.push(
+{   name: 'thezoo',
+    product: 'meat',
+    start: 2023,
+    end: 2024
+},
+{  name: 'thebar',
+    product: 'poison',
+    start: 2020,
+end: 2024}
+
+)
+
+company.forEach(item=>{
+    item.location = 'neb'
+})
+
+
+
+
+
+    console.log(company)
+
+const newLoc = company.map((item)=>{
+    return {
+        loc: item.location,
+        nam: item.name
+    }
+})
+
+console.log(newLoc)*/
+
+let numbers3 = [4,3,2,5,7,8,9]
+
+let newArr = numbers3.filter((num) => num % 2 === 0)
+
+let newArry2 = newArr.map((num) => num *2)
+console.log(newArry2)
+// Exercise 1: Array Manipulation
+// Create a function that takes an array of numbers and returns a new array 
+// with only the even numbers doubled.
+function doubleEvens(arr) {
+for( num of arr){
+    if(num % 2 === 0){
+      let result = num * 2
+console.log(result)
+    }
+    
+}
+  // Your code here
+}
+console.log(doubleEvens(numbers3))
+
+// Test
+//console.log(doubleEvens([1, 2, 3, 4, 5])); // Should output [4, 8]
+
+// Exercise 2: Object Manipulation
+// Create a function that takes an object and returns a new object with all
+// string values converted to uppercase.
+
+const obj = {name: "john", age: 30, city: "new york"};
+const obj1 = Object.values(obj).map((prop) => prop.toUpperCase())
+console.log(obj1)
+
+function uppercaseValues(obj) {
+ 
+      
+  // Your code here
+}
+
+
+
+// Test
+//console.log(uppercaseValues({name: "john", age: 30, city: "new york"}));
+// Should output {name: "JOHN", age: 30, city: "NEW YORK"}
+
+// Exercise 3: Asynchronous Programming
+// Create a function that simulates an API call with a 2-second delay,
+// then logs the result.
+function simulateAPICall(data) {
+  // Your code here
+}
+
+// Test
+simulateAPICall("Hello, API!"); // Should log "API response: Hello, API!" after 2 seconds
+
+// Exercise 4: Closure
+// Create a function that returns another function. The inner function
+// should increment a counter each time it's called.
+
+//f/unction createCounter() {
+
+   // let count = 0;
+
+   // function count3(numbers){
+        let numbers = [1,2,3]
+        for(num of numbers){
+            count += num
+        }
+    }
+
+ //   return {count3}
+  // Your code here
+
+ 
+// Test
+//const counter = createCounter();
+//console.log(count3.counter)
+
+// Exercise 5: Array Methods
+// Use array methods to transform an array of strings into a sorted array
+// of objects, each with a 'name' property and a 'length' property.
+function transformArray(arr) {
+    return arr.map((str)=> ({name: str, length: str.length}))
+    .sort((a, b) => a.name.localeCompare(b.name) )
+  // Your code here
+}
+
+// Test
+console.log(transformArray(["apple", "banana", "cherry"]));
+// Should output [
+//   { name: "apple", length: 5 },
+//   { name: "banana", length: 6 },
+//   { name: "cherry", length: 6 }
+// ] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

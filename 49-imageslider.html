@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slides {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .slides img {
+        width: 100%;
+        display: none;
+      }
+      img.displaySlide {
+        display: block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slides">
+      <img
+        src="./assets/cta2.JPG"
+        alt=""
+        class="slide"
+        width="400px"
+        height="300px"
+      />
+      <img
+        src="./assets/cta3.JPG"
+        alt=""
+        class="slide"
+        width="400px"
+        height="300px"
+      />
+      <img
+        src="./assets/cta4.JPG"
+        alt=""
+        class="slide"
+        width="400px"
+        height="300px"
+      />
+    </div>
+    <button class="prev" onclick="prev()">prev</button>
+    <button class="next" onclick="next()">next</button>
+    <script>
+      const slides = document.querySelectorAll(".slides img");
+
+      let slideIndex = 0;
+      let intervalID = null;
+
+      document.addEventListener("DOMContentLoaded", displaySlide);
+
+      function displaySlide() {
+        slides[slideIndex].classList.add("displaySlide");
+      }
+
+      function showSlide(index) {
+        if (index >= slides.length) {
+          slideIndex = 0;
+        } else if (index < 0) {
+          slideIndex = slides.length - 1;
+        }
+        slides.forEach((slide) => {
+          slide.classList.remove("displaySlide");
+        });
+        slides[slideIndex].classList.add("displaySlide");
+      }
+
+      function next() {
+        slideIndex++;
+        showSlide(slideIndex);
+      }
+
+      function prev() {
+        slideIndex--;
+        showSlide(slideIndex);
+      }
+    </script>
+  </body>
+</html>

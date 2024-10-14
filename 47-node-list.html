@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        display: block;
+        margin-block: 2rem;
+        background-color: skyblue;
+        color: white;
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">button 1</button>
+    <button id="btn">button 2</button>
+    <button id="btn">button 3</button>
+    <button id="btn">button 4</button>
+    <script>
+      //  nodelist = static collection of html elements. can be created using querrysellectorAll
+
+      let buttons = document.querySelectorAll("button");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.target.remove();
+          buttons = document.querySelectorAll(".button");
+          console.log(buttons);
+        });
+      });
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.target.style.backgroundColor = "green";
+        });
+      });
+
+      buttons.forEach((button) => {
+        button.addEventListener("mouseover", (event) => {
+          event.target.style.backgroundColor = "yellow";
+        });
+      });
+
+      buttons.forEach((button) => {
+        button.addEventListener("mouseout", (event) => {
+          event.target.style.backgroundColor = "skyblue";
+        });
+      });
+    </script>
+  </body>
+</html>

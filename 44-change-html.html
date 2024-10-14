@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 3px solid;
+        width: 100%;
+        height: 125px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">
+      <p>box 1</p>
+    </div>
+
+    <div class="box" id="box2">
+      <p>box 2</p>
+    </div>
+
+    <div class="box" id="box3">
+      <p>box 3</p>
+    </div>
+
+    <div class="box" id="box4">
+      <p>box 4</p>
+    </div>
+
+    <ul id="fruits">
+      <li>apple</li>
+      <li>banana</li>
+      <li>kiwi</li>
+    </ul>
+
+    <script>
+      const fruits = document.getElementById("fruits");
+
+      const newFruit = document.createElement("li");
+      newFruit.textContent = "mango";
+      newFruit.style.color = "hotpink";
+
+      const fruitList = document.querySelectorAll("#fruits li");
+      document.getElementById("fruits").insertBefore(newFruit, fruitList[1]);
+      // STEP 1 CREATE THE ELEMENT
+      // STEP 2 ADD ATTRIBUTES/ PROPERTIES
+      // STEP 3 APPEND ELEMENT TO DOM
+      // REMOVE HTML ELEMENT
+
+      const newH1 = document.createElement("h1");
+      newH1.style.color = "red";
+      newH1.textContent = "hello world";
+      //document.body.prepend(newH1);
+      //document.getElementById("box4").append(newH1);
+
+      document.body.prepend(newH1);
+    </script>
+  </body>
+</html>

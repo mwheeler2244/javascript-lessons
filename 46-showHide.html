@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+      }
+      img {
+        width: 150px;
+        padding-block: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="img"
+      src="./assets/gerson-repreza-hniuowbXbBY-unsplash.jpg"
+      alt=""
+    />
+    <button id="btn">hide</button>
+
+    <script>
+      const btn = document.getElementById("btn");
+      const image = document.getElementById("img");
+
+      btn.addEventListener("click", () => {
+        if (image.style.visibility === "visible") {
+          image.style.visibility = "hidden";
+          btn.textContent = "show";
+        } else {
+          image.style.visibility = "visible";
+          btn.textContent = "hide";
+        }
+      });
+    </script>
+  </body>
+</html>

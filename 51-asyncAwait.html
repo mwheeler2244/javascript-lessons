@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  Async/Await = Async = makes a function return a promise
+      //                  Await = makes an async function wait for a promise
+      //
+
+      async function walkDog() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const dogWalk = true;
+
+            if (dogWalk) {
+              resolve("very good! walked the dog");
+            } else {
+              reject("you lazy fucker, you didnt walk the dog");
+            }
+          }, 1500);
+        });
+      }
+
+      function cleanKitchen() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const kitchen = true;
+
+            if (kitchen) {
+              resolve("very good! cleaned kitchen");
+            } else {
+              reject("god damnit, you didnt clean the kitchen");
+            }
+          }, 1000);
+        });
+      }
+
+      function trashOut() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const trash = true;
+
+            if (trash) {
+              resolve("very good! took out the trash");
+            } else {
+              reject("wow fucker, no trash was taken out?");
+            }
+          }, 1000);
+        });
+      }
+
+      async function doChores() {
+        const walkDogResults = await walkDog();
+        console.log(walkDogResults);
+
+        const kitchenResults = await cleanKitchen();
+        console.log(kitchenResults);
+
+        const trashResults = await trashOut();
+        console.log(trashResults);
+
+        console.log("you finished chores");
+      }
+
+      doChores();
+    </script>
+  </body>
+</html>

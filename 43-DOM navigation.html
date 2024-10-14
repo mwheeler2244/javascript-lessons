@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>fruits</h2>
+    <ul id="fruits">
+      <li>apple</li>
+      <li>orange</li>
+      <li>pear</li>
+    </ul>
+    <h2>veggies</h2>
+    <ul id="veggies">
+      <li>spinach</li>
+      <li>cucumber</li>
+      <li>carrot</li>
+    </ul>
+    <h2>desserts</h2>
+    <ul id="desserts">
+      <li>cake</li>
+      <li>brownie</li>
+      <li>candy</li>
+    </ul>
+
+    <script>
+      //  .firstElementChild
+      //  .lastElementChild
+      //  .nextElementsibling
+      //  .previousElementsibling
+      //  .parentElement
+      //  .children
+
+      const ulElements = document.querySelectorAll("ul");
+      ulElements.forEach((element) => {
+        element.firstElementChild.style.backgroundColor = "green";
+      });
+
+      // children have to be turned into array
+
+      const desserts = document.getElementById("desserts");
+
+      const children = desserts.children;
+
+      //   Array.from(children).forEach((child) => {
+      //     child.style.backgroundColor = "yellow";
+      //   });
+    </script>
+  </body>
+</html>

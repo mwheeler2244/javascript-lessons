@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        background-color: rgb(8, 73, 73);
+        color: white;
+        padding: 1rem 4rem;
+      }
+      .btnNew {
+        background-color: rgb(88, 5, 26);
+        color: white;
+        padding: 1rem 4rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="btnId">button 1</button>
+    <script>
+      //  classlist = allows you to make reusable classes for many elements across page
+
+      //  add()
+      //  remove()
+      //  toggle()
+      //  replace(oldclass, newclass)
+      //  contains()
+
+      const btn = document.getElementById("btnId");
+
+      btn.classList.add("btn");
+      btn.addEventListener("click", () => {
+        btn.classList.replace("btn", "btnNew");
+        if (btn.classList.contains("btnNew")) {
+          btn.textContent = "clicked";
+        } else {
+        }
+      });
+
+      //btn.classList.add("btn");
+      //   btn.classList.remove("btn");
+
+      //   btn.onclick = function () {
+      //     if (btn.classList.contains("btn")) {
+      //       btn.textContent = "new button";
+      //     } else {
+      //     }
+
+      // e.target.classList.replace("btn", "btnNew");
+    </script>
+  </body>
+</html>

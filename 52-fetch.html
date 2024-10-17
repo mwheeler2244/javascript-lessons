@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  FETCH = function used for making HTTP requests to fetch resources
+      //          fetch(url, {method: 'GET', "POST", 'PUT', 'DELETE'})
+
+      async function getEmails() {
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        const jsonUserData = await response.json();
+        const allEmails = jsonUserData.map((user) => {
+          return user.email;
+        });
+        console.log(allEmails);
+      }
+      getEmails();
+
+      // 2nd parameter of fetch
+
+      async function getDadJoke() {
+        const response = await fetch("https://icanhazdadjoke.com/", {
+          method: "GET",
+          headers: {
+            Accept: "application/json", // Required to get a JSON response
+          },
+        });
+
+        const jokeData = await response.json();
+
+        console.log(jokeData.joke);
+      }
+      getDadJoke();
+
+      //   async function myCoolFunction2() {
+      //     const data = await myCoolFunction();
+      //     myUsers.myList = data;
+      //     console.log(myUsers.myList);
+      //   }
+
+      /*    const users = fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          data.forEach((user) => {
+            console.log(user);
+          });
+        })
+        .catch((error) => console.log("error")); */
+    </script>
+  </body>
+</html>
